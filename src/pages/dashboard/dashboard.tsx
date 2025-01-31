@@ -7,7 +7,7 @@ const Dashboard = () => {
   return (
     <div className="pt-5 space-y-5">
       <div className="flex gap-5 ">
-          <IncomeExpenseStat />
+          <IncomeExpenseStat balance={12000} expenses={4343} income={2432} key={1}/>
           <AnalyticsStat />
       </div>
       <Budgets />
