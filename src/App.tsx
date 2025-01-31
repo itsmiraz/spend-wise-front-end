@@ -1,7 +1,10 @@
+import Dashboard from "./pages/dashboard/dashboard"
 
 const App = () => {
   return (
-    <div>App</div>
+    <div>
+     <Dashboard/>
+    </div>
   )
 }
 
