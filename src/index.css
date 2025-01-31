@@ -7,6 +7,7 @@
 body {
   font-family: "Poppins", serif;
   font-style: normal;
+  background: #0d1016;
 }
 @layer base {
   :root {

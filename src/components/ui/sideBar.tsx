@@ -8,7 +8,7 @@ const Sidebar = () => {
   ];
 
   return (
-    <div className="min-h-screen rounded-xl text-gray-200 p-4 bg-gray-800 w-[220px]">
+    <div className="max-h-screen h-full rounded-xl text-gray-200 p-4 bg-gray-800 w-[220px]">
       <h2 className="font-bold pb-4  text-xl">SPEND WISE</h2>
 
       <ul className="pt-2 border-t border-b pb-4 border-gray-700 mt-10 ">

@@ -1,10 +1,11 @@
 import Sidebar from "../ui/sideBar";
 import { Outlet } from "react-router-dom";
 import Navbar from "../ui/navbar";
-
+import { ThemeProvider } from "../ui/theme-provider";
 const RootLayout = () => {
   return (
-    <div className="flex bg-[#0d1016]  text-white ">
+    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+      <div className="flex bg-[#0d1016]  max-w-[2200px] mx-auto text-white ">
       <div className="px-4 pt-4 sticky top-4">
         <Sidebar />
       </div>
@@ -13,6 +14,7 @@ const RootLayout = () => {
         <Outlet />
       </div>
     </div>
+    </ThemeProvider>
   );
 };
 
