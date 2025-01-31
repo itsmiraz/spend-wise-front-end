@@ -1,3 +1,4 @@
+import { Card, CardContent } from "@/components/ui/card";
 import {
   Table,
   TableBody,
@@ -97,7 +98,7 @@ const RTransactions = () => {
       <div className="w-full  space-y-4">
         <h2 className="text-2xl font-bold mb-4">Recent Transactions</h2>
 
-        <div className="border-none text-white rounded-md">
+        <div className="border-none md:block hidden text-white rounded-md">
           <Table>
             <TableHeader>
               <TableRow className="border-gray-400 ">
@@ -110,7 +111,10 @@ const RTransactions = () => {
             </TableHeader>
             <TableBody className="space-y-4">
               {transactions.map((transaction, i) => (
-                <TableRow className="border-none text-lg py-4 text-white" key={transaction.id}>
+                <TableRow
+                  className="border-none text-lg py-4 text-white"
+                  key={transaction.id}
+                >
                   <TableCell>
                     {i + 1}. {transaction.category}
                   </TableCell>
@@ -125,14 +129,41 @@ const RTransactions = () => {
                           : "text-red-600"
                       }
                     >
-                     ${Math.abs(transaction.amount).toFixed(2)}
+                      ${Math.abs(transaction.amount).toFixed(2)}
                     </span>
                   </TableCell>
-                  
                 </TableRow>
               ))}
             </TableBody>
           </Table>
+        </div>
+
+        <div className="space-y-4 block md:hidden">
+          {transactions.map((transaction, i) => (
+            <Card key={transaction.id} className=" text-white">
+              <CardContent className="p-4 bg-gray-900 rounded-lg">
+                <div className="flex justify-between items-center mb-2">
+                  <span className="font-bold">
+                    {i + 1}. {transaction.category}
+                  </span>
+                  <span
+                    className={
+                      transaction.amount >= 0
+                        ? "text-green-400"
+                        : "text-red-400"
+                    }
+                  >
+                    ${Math.abs(transaction.amount).toFixed(2)}
+                  </span>
+                </div>
+                <div className="text-sm text-gray-300">{transaction.type}</div>
+                <div className="text-sm text-gray-300">
+                  {transaction.paymentMethod}
+                </div>
+                <div className="text-sm text-gray-300">{transaction.date}</div>
+              </CardContent>
+            </Card>
+          ))}
         </div>
       </div>
     </div>

@@ -6,23 +6,23 @@ import {
   SquareChartGanttIcon,
 } from "lucide-react";
 import { NavLink } from "react-router-dom";
-
+export const links = [
+  { title: "Dashboard", link: "/", icon: <LayoutDashboard /> },
+  { title: "Budgets", link: "/budgets", icon: <SquareChartGanttIcon /> },
+  {
+    title: "Transactions",
+    link: "/transactions",
+    icon: <ChartNoAxesGantt />,
+  },
+  {
+    title: " Analytics",
+    link: "/analytics",
+    icon: <ChartSpline />,
+  },
+  { title: "Settings", link: "/settings", icon: <Settings /> },
+];
 const CustomSidebar = () => {
-  const links = [
-    { title: "Dashboard", link: "/", icon: <LayoutDashboard /> },
-    { title: "Budgets", link: "/budgets", icon: <SquareChartGanttIcon /> },
-    {
-      title: "Transactions",
-      link: "/transactions",
-      icon: <ChartNoAxesGantt />,
-    },
-    {
-      title: " Analytics",
-      link: "/analytics",
-      icon: <ChartSpline />,
-    },
-    { title: "Settings", link: "/settings", icon: <Settings /> },
-  ];
+
 
   return (
     <div className="max-h-screen flex-col flex h-full rounded-xl text-gray-200 p-4 bg-gray-800 w-[250px]">
