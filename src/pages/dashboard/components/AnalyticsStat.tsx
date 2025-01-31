@@ -17,7 +17,7 @@ const AnalyticsStat = () => {
   ];
 
   return (
-    <div className="w-full pr-10 flex justify-between bg-gray-700 p-4 text-white rounded-xl">
+    <div className="w-full pr-10 flex justify-between bg-gray-800 p-4 text-white rounded-xl">
       <h2 className="text-2xl font-semibold mb-4">Overview</h2>
       <div className="flex-1">
           <Chart chartData={chartData} />
