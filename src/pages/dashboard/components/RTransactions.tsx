@@ -1,4 +1,3 @@
-import { useState } from "react";
 import {
   Table,
   TableBody,
@@ -93,71 +92,43 @@ const transactions = [
 ];
 
 const RTransactions = () => {
-  const [searchTerm, setSearchTerm] = useState("");
-  const [visibleColumns, setVisibleColumns] = useState({
-    category: true,
-    type: true,
-    paymentMethod: true,
-    date: true,
-    amount: true,
-  });
-
-  const filteredTransactions = transactions.filter((transaction) =>
-    Object.values(transaction).some(
-      (value) =>
-        typeof value === "string" &&
-        value.toLowerCase().includes(searchTerm.toLowerCase())
-    )
-  );
-
   return (
     <div className="w-full bg-gray-700 rounded-xl p-4">
-      <div className="w-full space-y-4">
+      <div className="w-full  space-y-4">
         <h2 className="text-2xl font-bold mb-4">Recent Transactions</h2>
 
-        <div className="border rounded-md">
+        <div className="border-none text-white rounded-md">
           <Table>
             <TableHeader>
-              <TableRow>
-                {visibleColumns.category && <TableHead>Category</TableHead>}
-                {visibleColumns.type && <TableHead>Type</TableHead>}
-                {visibleColumns.paymentMethod && (
-                  <TableHead>Payment Method</TableHead>
-                )}
-                {visibleColumns.date && <TableHead>Date & Time</TableHead>}
-                {visibleColumns.amount && (
-                  <TableHead className="text-right">Amount</TableHead>
-                )}
+              <TableRow className="border-gray-400 ">
+                <TableHead>Category</TableHead>
+                <TableHead>Type</TableHead>
+                <TableHead>Payment Method</TableHead>
+                <TableHead>Date & Time</TableHead>
+                <TableHead className="text-right ">Amount</TableHead>
               </TableRow>
             </TableHeader>
-            <TableBody>
-              {filteredTransactions.map((transaction) => (
-                <TableRow key={transaction.id}>
-                  {visibleColumns.category && (
-                    <TableCell>{transaction.category}</TableCell>
-                  )}
-                  {visibleColumns.type && (
-                    <TableCell>{transaction.type}</TableCell>
-                  )}
-                  {visibleColumns.paymentMethod && (
-                    <TableCell>{transaction.paymentMethod}</TableCell>
-                  )}
-                  {visibleColumns.date && (
-                    <TableCell>{transaction.date}</TableCell>
-                  )}
-                  {visibleColumns.amount && (
-                    <TableCell className="text-right">
-                      <span
-                        className={
-                          transaction.amount >= 0
-                            ? "text-green-600"
-                            : "text-red-600"
-                        }
-                      >
-                        ${Math.abs(transaction.amount).toFixed(2)}
-                      </span>
-                    </TableCell>
-                  )}
+            <TableBody className="space-y-4">
+              {transactions.map((transaction, i) => (
+                <TableRow className="border-none text-lg py-4 text-white" key={transaction.id}>
+                  <TableCell>
+                    {i + 1}. {transaction.category}
+                  </TableCell>
+                  <TableCell>{transaction.type}</TableCell>
+                  <TableCell>{transaction.paymentMethod}</TableCell>
+                  <TableCell>{transaction.date}</TableCell>
+                  <TableCell className="text-right">
+                    <span
+                      className={
+                        transaction.amount >= 0
+                          ? "text-green-600"
+                          : "text-red-600"
+                      }
+                    >
+                     ${Math.abs(transaction.amount).toFixed(2)}
+                    </span>
+                  </TableCell>
+                  
                 </TableRow>
               ))}
             </TableBody>

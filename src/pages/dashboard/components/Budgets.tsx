@@ -19,8 +19,8 @@ const Budgets = () => {
         <h2 className="text-2xl font-bold mb-4">Monthly Budgets</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {budgets.map((budget, index) => (
-            <Card key={index} className="overflow-hidden">
-              <CardContent className="p-4">
+            <Card key={index} className="overflow-hidden ">
+              <CardContent className="p-4 bg-gray-800">
                 <div className="flex justify-between items-center mb-2">
                   <h3 className="font-semibold">{budget.category}</h3>
                   <span className="text-sm font-medium">
