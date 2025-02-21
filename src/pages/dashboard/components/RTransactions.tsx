@@ -1,4 +1,3 @@
-import { Card, CardContent } from "@/components/ui/card";
 import {
   Table,
   TableBody,
@@ -96,7 +95,7 @@ const RTransactions = () => {
   return (
     <div className="w-full bg-gray-800 rounded-xl p-4">
       <div className="w-full  space-y-4">
-        <h2 className="text-2xl font-bold mb-4">Recent Transactions</h2>
+        <h2 className="text-2xl font-semibold  mb-6">Recent Transactions</h2>
 
         <div className="border-none md:block hidden text-white rounded-md">
           <Table>
@@ -140,10 +139,9 @@ const RTransactions = () => {
 
         <div className="space-y-4 block md:hidden">
           {transactions.map((transaction, i) => (
-            <Card key={transaction.id} className=" text-white">
-              <CardContent className="p-4 bg-gray-900 rounded-lg">
+            <div key={transaction.id} className="pb-1 border-b border-gray-700 text-white">
                 <div className="flex justify-between items-center mb-2">
-                  <span className="font-bold">
+                  <span className="font-medium">
                     {i + 1}. {transaction.category}
                   </span>
                   <span
@@ -156,13 +154,12 @@ const RTransactions = () => {
                     ${Math.abs(transaction.amount).toFixed(2)}
                   </span>
                 </div>
-                <div className="text-sm text-gray-300">{transaction.type}</div>
+                {/* <div className="text-sm text-gray-300">{transaction.type}</div>
                 <div className="text-sm text-gray-300">
                   {transaction.paymentMethod}
                 </div>
-                <div className="text-sm text-gray-300">{transaction.date}</div>
-              </CardContent>
-            </Card>
+                <div className="text-sm text-gray-300">{transaction.date}</div> */}
+            </div>
           ))}
         </div>
       </div>

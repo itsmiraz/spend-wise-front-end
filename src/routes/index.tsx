@@ -4,6 +4,7 @@ import RootLayout from "../components/layouts/rootLayout";
 import Budgets from "@/pages/bugdets/budgets";
 import Transactions from "@/pages/transactions/transactions";
 import Settings from "@/pages/settings/settings";
+import Analytics from "@/pages/analytics/analytics";
 
 export const routes = createBrowserRouter([
   {
@@ -25,7 +26,7 @@ export const routes = createBrowserRouter([
       },
       {
         path:'/analytics',
-        element: <Transactions />,
+        element: <Analytics />,
       },
       {
         path:'/settings',

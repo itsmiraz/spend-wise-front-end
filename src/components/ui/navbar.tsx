@@ -6,6 +6,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import SelectDateRange from "./selectDateRange";
 
 const Navbar = () => {
   return (
@@ -13,6 +14,10 @@ const Navbar = () => {
       <div>
         <h2>Hello Miraj</h2>
         <p>How are you doing today?</p>
+      </div>
+   <div className="flex gap-x-10 items-center"> 
+   <div className="flex w-full">
+        <SelectDateRange/>
       </div>
       <div className="select-none outline-none">
         <DropdownMenu>
@@ -31,6 +36,7 @@ const Navbar = () => {
           </DropdownMenuContent>
         </DropdownMenu>
       </div>
+   </div>
     </div>
   );
 };
