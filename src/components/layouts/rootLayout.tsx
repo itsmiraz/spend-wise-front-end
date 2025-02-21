@@ -106,8 +106,10 @@ const AddDataButton = () => {
         onClick={() => setShow(!show)}
         className={`${show ? "bg-gray-500" : "bg-blue-500"} transition-all ease-in-out duration-300 size-14 flex justify-center items-center rounded-full fixed bottom-10 right-10`}
       >
-        {show ? <X /> : <Plus />}
+       <Plus className={`${show?'rotate-45':"rotate-0"} transition-all ease-in-out duration-300`}/>
       </button>
+
+
 
       {/* Animated Modal */}
       <AnimatePresence>

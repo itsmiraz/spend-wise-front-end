@@ -19,18 +19,6 @@ const persistedAuthReducer = persistReducer(persistConfig, authReducer);
 export const store = configureStore({
   reducer: {
     auth: persistedAuthReducer,
-    // planSelection: planSelectionReducer,
-    // scriptDetails: scriptDetailsReducer,
-    // actorDetails: actorDetailsReducer,
-    // videoEditingDetails: videoEditingDetailsReducer,
-    // orderDetails: orderDetailsReducer,
-    // creditPricingPlan: creditPricingPlanReducer,
-    // global: globalReducer,
-    // sidebar: sidebarReducer,
-    // templateVideoBrief : templateVideoBriefReducer, 
-    // templateActorDetails : templateActorReducer, 
-    // templateVideoEdit : templateVideoEditReducer, 
-    // templateDetails : templateDetailsReducer, 
     [baseApi.reducerPath]: baseApi.reducer,
   },
   middleware: (getDefaultMiddleware) =>
