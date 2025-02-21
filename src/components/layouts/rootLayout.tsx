@@ -3,7 +3,7 @@ import Navbar from "../ui/navbar";
 import { ThemeProvider } from "../ui/theme-provider";
 import CustomSidebar from "../ui/customSideBar";
 import { useState } from "react";
-import { ArrowLeftRight, ChevronDown, ChevronUp, CrossIcon, Menu, Plus, X, XIcon } from "lucide-react";
+import { ArrowLeftRight, ChevronDown, ChevronUp,  Menu, Plus, X, XIcon } from "lucide-react";
 import BottomNav from "../ui/bottomNav";
 const RootLayout = () => {
   const [show, setShow] = useState(false);
