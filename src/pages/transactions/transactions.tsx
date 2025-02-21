@@ -92,7 +92,7 @@ const Transactions = () => {
         <h2 className="text-2xl font-semibold  mb-6">Recent Transactions</h2>
 
         <div className="border-none md:block hidden text-white rounded-md">
-          <Table>
+          <Table >
             <TableHeader>
               <TableRow className="border-gray-400 ">
                 <TableHead>Category</TableHead>
@@ -105,10 +105,11 @@ const Transactions = () => {
             <TableBody className="space-y-4">
               {transactions.map((transaction, i) => (
                 <TableRow
-                  className="border-none text-lg py-4 text-white"
+
+                  className="border-none  text-lg py-4 text-gray-300"
                   key={transaction.id}
                 >
-                  <TableCell>
+                  <TableCell className=" py-3 ">
                     {i + 1}. {transaction.category}
                   </TableCell>
                   <TableCell>{transaction.type}</TableCell>
