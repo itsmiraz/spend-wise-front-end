@@ -93,7 +93,7 @@ const transactions = [
 
 const RTransactions = () => {
   return (
-    <div className="w-full bg-gray-800 rounded-xl p-4">
+    <div className="w-full bg-[#0E1B2B] rounded-xl p-4">
       <div className="w-full  space-y-4">
         <h2 className="text-2xl font-semibold  mb-6">Recent Transactions</h2>
 

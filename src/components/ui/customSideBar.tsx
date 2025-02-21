@@ -25,7 +25,7 @@ const CustomSidebar = () => {
 
 
   return (
-    <div className="max-h-screen flex-col flex h-full rounded-xl text-gray-200 p-4 bg-gray-800 w-[250px]">
+    <div className="max-h-screen flex-col flex h-full rounded-xl text-gray-200 p-4 bg-[#0E1B2B] w-[250px]">
       <h2 className="font-bold pb-4  text-xl">SPEND WISE</h2>
 
       <ul className="pt-5 h-full border-t  border-b pb-4 border-gray-700 space-y-2  mt-10 ">
@@ -35,7 +35,7 @@ const CustomSidebar = () => {
               to={item.link}
               className={({ isActive }) =>
                 `flex rounded-lg px-2 py-2 items-center gap-x-2 ${
-                  isActive ? "bg-gray-700" : "hover:bg-gray-900"
+                  isActive ? "bg-gray-700" : "hover:bg-[#0E1B2B]"
                 }`
               }
             >

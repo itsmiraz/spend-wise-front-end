@@ -10,7 +10,7 @@ import SelectDateRange from "./selectDateRange";
 
 const Navbar = () => {
   return (
-    <div className="bg-gray-800 flex justify-between items-center   w-full rounded-xl px-4  py-2">
+    <div className="bg-[#0E1B2B] flex justify-between items-center   w-full rounded-xl px-4  py-2">
       <div>
         <h2>Hello Miraj</h2>
         <p>How are you doing today?</p>

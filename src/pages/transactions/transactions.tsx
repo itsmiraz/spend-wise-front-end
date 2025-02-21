@@ -87,7 +87,7 @@ const Transactions = () => {
   ];
 
   return (
-    <div> <div className="w-full mt-4 bg-gray-800 rounded-xl p-4">
+    <div> <div className="w-full mt-4 bg-[#0E1B2B] rounded-xl p-4">
       <div className="w-full  space-y-4">
         <h2 className="text-2xl font-semibold  mb-6">Recent Transactions</h2>
 
