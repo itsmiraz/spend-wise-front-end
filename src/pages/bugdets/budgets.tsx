@@ -21,16 +21,16 @@ const budgets = [
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {budgets.map((budget, index) => (
           <Card key={index} className="overflow-hidden ">
-            <CardContent className="p-4 bg-[#0E1B2B]">
+            <CardContent className="p-4  bg-[#0E1B2B]">
               <div className="flex justify-between items-center mb-2">
-                <h3 className="font-semibold">{budget.category}</h3>
+                <h3 className=" text-neutral-300 font-semibold">{budget.category}</h3>
                 <span className="text-sm font-medium">
                   ${budget.spent} / ${budget.total}
                 </span>
               </div>
               <Progress
                 value={(budget.spent / budget.total) * 100}
-                className="h-2"
+                className="h-2 "
               />
               <div className="flex justify-between items-center mt-2 text-sm">
                 <span className="text-muted-foreground">
