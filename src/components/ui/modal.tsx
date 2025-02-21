@@ -20,7 +20,6 @@ const Modal = ({
 }: ModalProps) => {
     const defaultWidth = width || "400px";
     const defaultPadding = padding || "20px";
-    console.log(modalPosition);
     return (
         <AnimatePresence>
             {isOpen && (
