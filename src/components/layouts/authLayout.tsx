@@ -6,6 +6,7 @@ import {
 
 } from "@/components/ui/card"
 import AuthCoverImage from '@/assets/images/auth-cover.jpg'
+import AnimatedPage from '../ui/animatedPage'
 const AuthLayout = () => {
 
     return (
@@ -16,13 +17,15 @@ const AuthLayout = () => {
                         <CardContent className="grid p-0 md:grid-cols-2">
 
                             <div className="p-6 md:p-8">
-                                <Outlet />
+                                <AnimatedPage>
+                                    <Outlet />
+                                </AnimatedPage>
                             </div>
-                            <div className="relative hidden bg-muted md:block">
+                            <div className="relative hidden transition-all ease-in-out duration-300 bg-muted md:block">
                                 <img
                                     src={AuthCoverImage}
                                     alt="Image"
-                                    className="absolute inset-0 h-full w-full object-cover dark:brightness-[0.2] dark:grayscale"
+                                    className="absolute transition-all ease-in-out duration-300 inset-0 h-full w-full object-cover dark:brightness-[0.2] dark:grayscale"
                                 />
                             </div>
                         </CardContent>

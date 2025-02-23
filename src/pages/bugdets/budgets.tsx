@@ -1,3 +1,4 @@
+import AnimatedPage from "@/components/ui/animatedPage";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -44,6 +45,7 @@ const Budgets = () => {
 
   return (
     <div>
+   <AnimatedPage>
       <div className="w-full mt-4 bg-[#0E1B2B] rounded-xl p-4">
         <div className="w-full space-y-4">
           <div className="flex justify-between items-center">
@@ -117,6 +119,7 @@ const Budgets = () => {
           </div>
         </div>
       </Modal>
+      </AnimatedPage>
     </div>
   );
 };

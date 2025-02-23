@@ -1,9 +1,11 @@
+import AnimatedPage from '@/components/ui/animatedPage'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 
 const ResetPassword = () => {
   return (
+    <AnimatedPage>
     <form>
       <div className="flex py-10 flex-col gap-6">
         <div className="flex flex-col items-center text-center">
@@ -32,6 +34,7 @@ const ResetPassword = () => {
         </Button>
       </div>
     </form>
+    </AnimatedPage>
   )
 }
 

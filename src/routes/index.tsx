@@ -21,7 +21,7 @@ export const routes = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <App />,
+        element:  <AnimatedPage><App /></AnimatedPage>,
       },
       {
         path: '/budgets',
@@ -37,35 +37,35 @@ export const routes = createBrowserRouter([
       },
       {
         path: '/settings',
-        element: <Settings />,
+        element:<AnimatedPage> <Settings /></AnimatedPage>,
       },
 
     ],
   },
   {
     path: "/auth",
-    element: <AuthLayout />,
+    element: <AnimatedPage><AuthLayout /></AnimatedPage>,
     children: [
 
       {
         path: 'login',
-        element: <SignIn />
+        element: <AnimatedPage> <SignIn /></AnimatedPage>
       },
       {
         path: 'register',
-        element: <SignUp />
+        element:  <AnimatedPage><SignUp /></AnimatedPage>
       },
       {
         path: 'forget-password',
-        element: <ForgetPassword />
+        element:  <AnimatedPage><ForgetPassword /></AnimatedPage>
       },
       {
         path: 'reset-password',
-        element: <ResetPassword />
+        element: <AnimatedPage> <ResetPassword /></AnimatedPage>
       },
       {
         path: 'verify-email',
-        element: <VerifyEmail />
+        element: <AnimatedPage> <VerifyEmail /></AnimatedPage>
       },
     ]
   },

@@ -1,3 +1,4 @@
+import AnimatedPage from '@/components/ui/animatedPage';
 import { Button } from '@/components/ui/button';
 import React, { ClipboardEvent, KeyboardEvent, useEffect, useRef, useState } from 'react'
 import { ScrollRestoration, } from 'react-router-dom';
@@ -159,7 +160,7 @@ const VerifyEmail = () => {
   //   });
   return (
     <div className='py-6'>
-
+<AnimatedPage>
       <h2 className='text-2xl text-center  font-medium'>Verify Email</h2>
       <p className="text-sm text-center leading-[18px] mt-4 text-gray-500">
         Enter the verification code we emailed to : {userMail}{" "}
@@ -224,6 +225,7 @@ const VerifyEmail = () => {
         </div>
       </div>
       <ScrollRestoration />
+      </AnimatedPage>
     </div>
   )
 }

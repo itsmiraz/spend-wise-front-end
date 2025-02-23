@@ -4,9 +4,12 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import GoogleIcon from '@/assets/icons/googleIcon.svg'
 import { Link } from "react-router-dom"
+import AnimatedPage from "@/components/ui/animatedPage"
 
 const SignUp = () => {
   return (
+    <AnimatedPage>
+
     <form >
     <div className="flex flex-col gap-6">
         <div className="flex flex-col items-center text-center">
@@ -68,6 +71,7 @@ const SignUp = () => {
         </div>
     </div>
 </form>
+</AnimatedPage>
   )
 }
 

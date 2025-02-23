@@ -1,3 +1,4 @@
+import AnimatedPage from '@/components/ui/animatedPage';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import React from 'react'
 
@@ -87,78 +88,82 @@ const Transactions = () => {
   ];
 
   return (
-    <div> <div className="w-full mt-4 bg-[#0E1B2B] rounded-xl p-4">
-      <div className="w-full  space-y-4">
-        <h2 className="text-2xl font-semibold  mb-6">Recent Transactions</h2>
+    <div>
+      <AnimatedPage>
+        <div className="w-full mt-4 bg-[#0E1B2B] rounded-xl p-4">
+          <div className="w-full  space-y-4">
+            <h2 className="text-2xl font-semibold  mb-6">Recent Transactions</h2>
 
-        <div className="border-none md:block hidden text-white rounded-md">
-          <Table >
-            <TableHeader>
-              <TableRow className="border-gray-400 ">
-                <TableHead>Category</TableHead>
-                <TableHead>Type</TableHead>
-                <TableHead>Payment Method</TableHead>
-                <TableHead>Date & Time</TableHead>
-                <TableHead className="text-right ">Amount</TableHead>
-              </TableRow>
-            </TableHeader>
-            <TableBody className="space-y-4">
+            <div className="border-none md:block hidden text-white rounded-md">
+              <Table >
+                <TableHeader>
+                  <TableRow className="border-gray-400 ">
+                    <TableHead>Category</TableHead>
+                    <TableHead>Type</TableHead>
+                    <TableHead>Payment Method</TableHead>
+                    <TableHead>Date & Time</TableHead>
+                    <TableHead className="text-right ">Amount</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody className="space-y-4">
+                  {transactions.map((transaction, i) => (
+                    <TableRow
+
+                      className="border-none  text-lg py-4 text-gray-300"
+                      key={transaction.id}
+                    >
+                      <TableCell className=" py-3 ">
+                        {i + 1}. {transaction.category}
+                      </TableCell>
+                      <TableCell>{transaction.type}</TableCell>
+                      <TableCell>{transaction.paymentMethod}</TableCell>
+                      <TableCell>{transaction.date}</TableCell>
+                      <TableCell className="text-right">
+                        <span
+                          className={
+                            transaction.amount >= 0
+                              ? "text-green-600"
+                              : "text-red-600"
+                          }
+                        >
+                          ${Math.abs(transaction.amount).toFixed(2)}
+                        </span>
+                      </TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </div>
+
+            <div className="space-y-4 block md:hidden">
               {transactions.map((transaction, i) => (
-                <TableRow
-
-                  className="border-none  text-lg py-4 text-gray-300"
-                  key={transaction.id}
-                >
-                  <TableCell className=" py-3 ">
-                    {i + 1}. {transaction.category}
-                  </TableCell>
-                  <TableCell>{transaction.type}</TableCell>
-                  <TableCell>{transaction.paymentMethod}</TableCell>
-                  <TableCell>{transaction.date}</TableCell>
-                  <TableCell className="text-right">
+                <div key={transaction.id} className="pb-1 border-b border-gray-700 text-white">
+                  <div className="flex justify-between items-center mb-2">
+                    <span className="font-medium">
+                      {i + 1}. {transaction.category}
+                    </span>
                     <span
                       className={
                         transaction.amount >= 0
-                          ? "text-green-600"
-                          : "text-red-600"
+                          ? "text-green-400"
+                          : "text-red-400"
                       }
                     >
                       ${Math.abs(transaction.amount).toFixed(2)}
                     </span>
-                  </TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </div>
-
-        <div className="space-y-4 block md:hidden">
-          {transactions.map((transaction, i) => (
-            <div key={transaction.id} className="pb-1 border-b border-gray-700 text-white">
-              <div className="flex justify-between items-center mb-2">
-                <span className="font-medium">
-                  {i + 1}. {transaction.category}
-                </span>
-                <span
-                  className={
-                    transaction.amount >= 0
-                      ? "text-green-400"
-                      : "text-red-400"
-                  }
-                >
-                  ${Math.abs(transaction.amount).toFixed(2)}
-                </span>
-              </div>
-              {/* <div className="text-sm text-gray-300">{transaction.type}</div>
+                  </div>
+                  {/* <div className="text-sm text-gray-300">{transaction.type}</div>
               <div className="text-sm text-gray-300">
                 {transaction.paymentMethod}
               </div>
               <div className="text-sm text-gray-300">{transaction.date}</div> */}
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
-      </div>
-    </div></div>
+      </AnimatedPage>
+    </div>
   )
 }
 
