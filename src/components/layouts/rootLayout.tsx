@@ -6,6 +6,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import BottomNav from "../ui/bottomNav";
 import ModalTriggerButton from "../ui/modalTriggerButton";
+import AnimatedPage from "../ui/animatedPage";
 const RootLayout = () => {
   const [show, setShow] = useState(false);
 
@@ -28,7 +29,9 @@ const RootLayout = () => {
             <div></div>
           </div>
           <Navbar />
-          <Outlet />
+          <AnimatedPage>
+            <Outlet />
+          </AnimatedPage>
           <BottomNav />
 
           <ModalTriggerButton />
