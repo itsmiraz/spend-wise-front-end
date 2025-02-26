@@ -46,7 +46,7 @@ const Budgets = () => {
   return (
     <div>
    <AnimatedPage>
-      <div className="w-full mt-4 bg-[#0E1B2B] rounded-xl p-4">
+      <div className="w-full mt-4 bg-gray-300 dark:bg-[#0E1B2B] rounded-xl p-4">
         <div className="w-full space-y-4">
           <div className="flex justify-between items-center">
             <h2 className="text-2xl font-bold mb-4">Monthly Budgets</h2>
@@ -62,7 +62,7 @@ const Budgets = () => {
             >
               {[...budgets].reverse().map((budget, index) => (<AnimatedListItem key={budget.id}>
                 <Card key={index} className="overflow-hidden w-full">
-                  <CardContent className="p-4 w-full bg-[#0E1B2B]">
+                  <CardContent className="p-4 w-full bg-gray-300 dark:bg-[#0E1B2B]">
                     <div className="flex justify-between items-center mb-2">
                       <h3 className="text-neutral-300 font-semibold">
                         {budget.category}

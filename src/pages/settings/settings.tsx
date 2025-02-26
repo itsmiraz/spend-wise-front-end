@@ -17,7 +17,7 @@ const Settings = () => {
         <h1 className="text-3xl font-bold mb-6">Settings</h1>
         <div className="space-y-8">
           {/* Personal Details */}
-          <section className='p-4 border border-gray-800 rounded-lg bg-[#0E1B2B]'>
+          <section className='p-4 border border-gray-800 rounded-lg bg-gray-300 dark:bg-[#0E1B2B]'>
             <h2 className="text-xl font-medium mb-4">Personal Details</h2>
             <div className="space-y-4">
               <div>
@@ -36,7 +36,7 @@ const Settings = () => {
             </div>
           </section>
           {/* Currency */}
-          <section className='p-4 border border-gray-800 rounded-lg bg-[#0E1B2B]'>
+          <section className='p-4 border border-gray-800 rounded-lg bg-gray-300 dark:bg-[#0E1B2B]'>
             <h2 className="text-xl font-medium mb-4">Currency</h2>
             <Select>
               <SelectTrigger className="w-[180px]">
@@ -51,7 +51,7 @@ const Settings = () => {
             </Select>
           </section>
           {/* Theme */}
-          <section className='p-4 border border-gray-800 rounded-lg bg-[#0E1B2B]'>
+          <section className='p-4 border border-gray-800 rounded-lg bg-gray-300 dark:bg-[#0E1B2B]'>
             <h2 className="text-xl font-medium mb-4">Theme</h2>
             <div className="flex items-center space-x-2">
               <Switch id="dark-mode" checked={darkMode} onCheckedChange={setDarkMode} />
@@ -61,7 +61,7 @@ const Settings = () => {
           </section>
 
           {/* Language */}
-          <section className='p-4 border border-gray-800 rounded-lg bg-[#0E1B2B]'>
+          <section className='p-4 border border-gray-800 rounded-lg bg-gray-300 dark:bg-[#0E1B2B]'>
             <h2 className="text-xl font-medium mb-4">Language</h2>
             <Select>
               <SelectTrigger className="w-[180px]">
@@ -77,7 +77,7 @@ const Settings = () => {
           </section>
 
           {/* Privacy Settings */}
-          <section className='p-4 border border-gray-800 rounded-lg bg-[#0E1B2B]'>
+          <section className='p-4 border border-gray-800 rounded-lg bg-gray-300 dark:bg-[#0E1B2B]'>
             <h2 className="text-xl font-medium mb-4">Privacy Settings</h2>
             <div className="space-y-4">
               <div className="flex items-center space-x-2">

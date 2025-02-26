@@ -1,6 +1,5 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "../ui/navbar";
-import { ThemeProvider } from "../ui/theme-provider";
 import CustomSidebar from "../ui/customSideBar";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
@@ -11,8 +10,8 @@ const RootLayout = () => {
   const [show, setShow] = useState(false);
 
   return (
-    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-      <div className="flex bg-[#0d1016] relative overflow-hidden max-w-[2200px] mx-auto text-white ">
+    <div>
+      <div className="flex bg-gray-100 dark:bg-[#0d1016] relative overflow-hidden max-w-[2200px] mx-auto text-white ">
         <div className="px-4 md:block hidden pt-4 sticky top-4">
           <CustomSidebar />
         </div>
@@ -37,7 +36,7 @@ const RootLayout = () => {
           <ModalTriggerButton />
         </div>
       </div>
-    </ThemeProvider>
+    </div>
   );
 };
 

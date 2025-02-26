@@ -25,7 +25,7 @@ const CustomSidebar = () => {
 
 
   return (
-    <div className="max-h-screen flex-col flex h-full rounded-xl text-gray-200 p-4 bg-[#0E1B2B] w-[250px]">
+    <div className="max-h-screen flex-col flex h-full rounded-xl   text-gray-800 dark:text-gray-200 p-4  bg-gray-300  dark:bg-[#0E1B2B] w-[250px]">
       <h2 className="font-bold pb-4  text-xl">SPEND WISE</h2>
 
       <ul className="pt-5 h-full border-t  border-b pb-4 border-gray-700 space-y-2  mt-10 ">
@@ -34,8 +34,8 @@ const CustomSidebar = () => {
             <NavLink
               to={item.link}
               className={({ isActive }) =>
-                `flex rounded-lg px-2 py-2 items-center gap-x-2 ${
-                  isActive ? "bg-gray-700" : "hover:bg-[#0E1B2B]"
+                `flex rounded-lg px-2  transition-all ease-in-out duration-300 py-2 items-center gap-x-2 ${
+                  isActive ? "bg-gray-400 " : "hover:bg-[#676767] text-gray-800 "
                 }`
               }
             >
@@ -46,7 +46,7 @@ const CustomSidebar = () => {
         ))}
       </ul>
       <div className="flex flex-1  gap-4 pt-4  items-center">
-        <div className="size-14 select-none rounded-full text-lg flex justify-center items-center font-bold  bg-blue-950">
+        <div className="size-14 select-none rounded-full text-lg flex justify-center items-center font-bold  bg-gray-200 dark:bg-blue-950">
           <h2>MH</h2>
         </div>
         <div>
