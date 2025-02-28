@@ -40,37 +40,37 @@ const ModalTriggerButton = () => {
             {/* Add Income */}
             <button
                 ref={buttonRefs.income}
-                className={`${show ? " bottom-72" : "bottom-10"} bg-green-500 transition-all ease-in-out duration-300 size-14 flex justify-center items-center rounded-full fixed right-10`}
+                className={`${show ? " bottom-72" : "bottom-10"} bg-green-500 transition-all ease-in-out duration-300 size-14 flex justify-center text-white items-center rounded-full fixed right-10`}
                 onClick={() => openModal("income")}
             >
                 <ChevronUp />
-                {show && <p className="absolute -left-28 font-medium whitespace-nowrap">Add Income</p>}
+                {show && <p className="absolute text-light_text_primary dark:text-dark_text_primary -left-28 font-medium whitespace-nowrap">Add Income</p>}
             </button>
 
             {/* Add Expense */}
             <button
                 ref={buttonRefs.expense}
-                className={`${show ? " bottom-52" : "bottom-10"} bg-red-500 transition-all ease-in-out duration-300 size-14 flex justify-center items-center rounded-full fixed right-10`}
+                className={`${show ? " bottom-52" : "bottom-10"} bg-red-500 transition-all ease-in-out duration-300 size-14 flex justify-center text-white items-center rounded-full fixed right-10`}
                 onClick={() => openModal("expense")}
             >
                 <ChevronDown />
-                {show && <p className="absolute -left-28 font-medium whitespace-nowrap">Add Expense</p>}
+                {show && <p className="absolute text-light_text_primary dark:text-dark_text_primary -left-28 font-medium whitespace-nowrap">Add Expense</p>}
             </button>
 
             {/* Transfer */}
             <button
                 ref={buttonRefs.transfer}
-                className={`${show ? " bottom-32" : "bottom-10"} bg-purple-500 transition-all ease-in-out duration-300 size-14 flex justify-center items-center rounded-full fixed right-10`}
+                className={`${show ? " bottom-32" : "bottom-10"} bg-purple-500 transition-all ease-in-out duration-300 size-14 flex justify-center text-white items-center rounded-full fixed right-10`}
                 onClick={() => openModal("transfer")}
             >
                 <ArrowLeftRight />
-                {show && <p className="absolute -left-20 font-medium whitespace-nowrap">Transfer</p>}
+                {show && <p className="absolute text-light_text_primary dark:text-dark_text_primary -left-20 font-medium whitespace-nowrap">Transfer</p>}
             </button>
 
             {/* Main Toggle Button */}
             <button
                 onClick={() => setShow(!show)}
-                className={`${show ? "bg-gray-500" : "bg-blue-500"} transition-all ease-in-out duration-300 size-14 flex justify-center items-center rounded-full fixed bottom-10 right-10`}
+                className={`${show ? "bg-gray-500" : "bg-blue-500"} transition-all ease-in-out duration-300 size-14 flex justify-center text-white items-center rounded-full fixed bottom-10 right-10`}
             >
                 <Plus className={`${show ? 'rotate-45' : "rotate-0"} transition-all ease-in-out duration-300`} />
             </button>
@@ -90,7 +90,7 @@ const ModalTriggerButton = () => {
                         onClick={closeModal}
                     >
                         <motion.div
-                            className="bg-[#072E44] p-4    z-50  relative rounded-[40px] w-[658px]"
+                            className="bg-light_2nd_bg dark:bg-dark_2nd_bg p-4    z-50  relative rounded-[40px] w-[658px]"
                             initial={{
                                 x: modalPosition.x - window.innerWidth / 2,
                                 y: modalPosition.y - window.innerHeight / 2,

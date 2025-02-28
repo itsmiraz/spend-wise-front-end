@@ -15,7 +15,7 @@ export default {
   		},
   		colors: {
 			dark_bg:"#0B1A23",
-			dark_2nd_bg:"#004A73",
+			dark_2nd_bg:"#072C44",
 			primary:"#00A2FF",
 			dark_text_primary:"#F1F1F1",
 			dark_text_secondary:"#BDBDBD",

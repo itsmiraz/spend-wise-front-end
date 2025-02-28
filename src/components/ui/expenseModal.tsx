@@ -1,25 +1,26 @@
 import React, { useState } from 'react'
 import { Button } from './button';
 
+export const paymentOptions = [
+    {
+        id: 'bank',
+        title: 'Bank'
+    },
+    {
+        id: 'cash',
+        title: 'Cash'
+    },
+    {
+        id: 'bkash',
+        title: 'Bkash'
+    },
+]
+
 const ExpenseModal = () => {
     const [selected, setselected] = useState('');
     const [selectedCatagory, setSelectedCatagory] = useState('');
 
-    const paymentOptions = [
-        {
-            id: 'bank',
-            title: 'Bank'
-        },
-        {
-            id: 'cash',
-            title: 'Cash'
-        },
-        {
-            id: 'bkash',
-            title: 'Bkash'
-        },
-    ]
-
+  
     const categories = [
         {
             id: 'grocery',
@@ -70,7 +71,7 @@ const ExpenseModal = () => {
                 <input
                     type="number"
                     placeholder='0.00 BDT'
-                    className="bg-transparent text-[63px] text-light_text_primary dark:text-dark_text_primary  font-bold outline-none border-none "
+                    className="bg-transparent placeholder:text-blue-400 text-[63px] text-light_text_primary dark:text-dark_text_primary  font-bold outline-none border-none "
                 />
             </div>
             <div className="flex pb-4  border-b border-[#FFFFFF]/10 relative w-full items-center  px-2 py-1 rounded-md">
@@ -102,7 +103,7 @@ const ExpenseModal = () => {
             </div>
 
             {/* created at */}
-            <div className='px-8 py-3 rounded-full flex w-fit gap-x-5 text-sm text-light_text_primary dark:text-dark_text_primary   bg-[#233640]'>
+            <div className='px-8 py-3 rounded-full flex w-fit gap-x-5 text-sm text-white  bg-[#233640]'>
                 <p>Created At</p>
                 <p>21 Feb, 9:00 PM</p>
             </div>
