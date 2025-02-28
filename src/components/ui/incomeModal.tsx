@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { paymentOptions } from './expenseModal'
 import { Button } from './button';
 

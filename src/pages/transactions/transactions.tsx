@@ -1,6 +1,6 @@
 import AnimatedPage from '@/components/ui/animatedPage';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
-import React from 'react'
+
 
 const Transactions = () => {
   // Sample transaction data with the new structure

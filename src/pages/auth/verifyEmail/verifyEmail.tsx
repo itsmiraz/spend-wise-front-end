@@ -1,6 +1,6 @@
 import AnimatedPage from '@/components/ui/animatedPage';
 import { Button } from '@/components/ui/button';
-import React, { ClipboardEvent, KeyboardEvent, useEffect, useRef, useState } from 'react'
+import  { ClipboardEvent, KeyboardEvent, useEffect, useRef, useState } from 'react'
 import { ScrollRestoration, } from 'react-router-dom';
 
 const VerifyEmail = () => {
