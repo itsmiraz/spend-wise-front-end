@@ -13,9 +13,9 @@ const SignUp = () => {
     <form >
     <div className="flex flex-col gap-6">
         <div className="flex flex-col items-center text-center">
-            <h1 className="text-2xl font-bold">Welcome to Spend Wise</h1>
+            <h1 className="text-2xl font-bold">Welcome to Spendium</h1>
             <p className="text-balance mt-2 text-muted-foreground">
-                Create account at Spend Wise
+                Create account at Spendium
             </p>
         </div>
         <div className="grid gap-2">

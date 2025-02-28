@@ -93,11 +93,11 @@ const transactions = [
 
 const RTransactions = () => {
   return (
-    <div className="w-full bg-gray-300 dark:bg-[#0E1B2B] rounded-xl p-4">
+    <div className="w-full bg-light_bg dark:bg-dark_bg rounded-xl p-4">
       <div className="w-full  space-y-4">
         <h2 className="text-2xl font-semibold  mb-6">Recent Transactions</h2>
 
-        <div className="border-none md:block hidden text-white rounded-md">
+        <div className="border-none md:block hidden text-light_text_primary dark:text-dark_text_primary  rounded-md">
           <Table>
             <TableHeader>
               <TableRow className="border-gray-400 ">
@@ -111,7 +111,7 @@ const RTransactions = () => {
             <TableBody className="space-y-4">
               {transactions.map((transaction, i) => (
                 <TableRow
-                  className="border-none text-lg py-4 text-white"
+                  className="border-none text-lg py-4 text-light_text_primary dark:text-dark_text_primary "
                   key={transaction.id}
                 >
                   <TableCell>

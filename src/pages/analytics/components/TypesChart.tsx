@@ -14,7 +14,7 @@ const data = [
 const COLORS = ["#ffffff", "#2e00fc"];
 const TypesChart = () => {
   return (
-    <div className="p-4 w-[250px]  rounded-lg bg-gray-300 dark:bg-[#0E1B2B]">
+    <div className="p-4 w-[250px]  rounded-lg bg-light_bg dark:bg-dark_bg">
       <h2 className="text-lg">Needs Vs Want</h2>
       <div className="w-[200px] h-[200px] flex justify-center items-center relative overflow-hidden">
         <ChartContainer

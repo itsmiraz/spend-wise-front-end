@@ -11,7 +11,7 @@ import ToggleTheme from "./theme-toggle";
 
 const Navbar = () => {
   return (
-    <div className="  bg-gray-300 dark:bg-[#0E1B2B] text-gray-900 dark:text-white  flex justify-between items-center   w-full rounded-xl px-4  py-2">
+    <div className=" sticky top-0 z-40  bg-light_bg dark:bg-dark_bg text-light_text_primary dark:text-dark_text_primary  flex justify-between items-center   w-full rounded-xl px-4  py-2">
       <div>
         <h2>Hello Miraj</h2>
         <p>How are you doing today?</p>

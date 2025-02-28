@@ -7,17 +7,19 @@ import { Label } from "@/components/ui/label"
 import { Switch } from "@/components/ui/switch"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import AnimatedPage from '@/components/ui/animatedPage'
+import { useTheme } from 'next-themes'
 const Settings = () => {
-  const [darkMode, setDarkMode] = useState(false)
+  // const [darkMode, setDarkMode] = useState(false)
+  const {setTheme,theme} = useTheme()
   const [hideBalance, setHideBalance] = useState(false)
   const [hideIncome, setHideIncome] = useState(false)
   return (
-    <div className="container mx-auto py-8">
+    <div className="py-8">
       <AnimatedPage>
         <h1 className="text-3xl font-bold mb-6">Settings</h1>
         <div className="space-y-8">
           {/* Personal Details */}
-          <section className='p-4 border border-gray-800 rounded-lg bg-gray-300 dark:bg-[#0E1B2B]'>
+          <section className='p-4 border  border-gray-300 dark:border-gray-800 rounded-lg bg-light_bg dark:bg-dark_bg'>
             <h2 className="text-xl font-medium mb-4">Personal Details</h2>
             <div className="space-y-4">
               <div>
@@ -32,11 +34,11 @@ const Settings = () => {
                 <Label htmlFor="password">Password</Label>
                 <Input id="password" type="password" placeholder="••••••••" />
               </div>
-              <Button>Update Personal Details</Button>
+              <Button variant={'primary'}>Update Personal Details</Button>
             </div>
           </section>
           {/* Currency */}
-          <section className='p-4 border border-gray-800 rounded-lg bg-gray-300 dark:bg-[#0E1B2B]'>
+          <section className='p-4 border  border-gray-300 dark:border-gray-800 rounded-lg bg-light_bg dark:bg-dark_bg'>
             <h2 className="text-xl font-medium mb-4">Currency</h2>
             <Select>
               <SelectTrigger className="w-[180px]">
@@ -51,17 +53,17 @@ const Settings = () => {
             </Select>
           </section>
           {/* Theme */}
-          <section className='p-4 border border-gray-800 rounded-lg bg-gray-300 dark:bg-[#0E1B2B]'>
+          <section className='p-4 border  border-gray-300 dark:border-gray-800 rounded-lg bg-light_bg dark:bg-dark_bg'>
             <h2 className="text-xl font-medium mb-4">Theme</h2>
             <div className="flex items-center space-x-2">
-              <Switch id="dark-mode" checked={darkMode} onCheckedChange={setDarkMode} />
+              <Switch id="dark-mode" checked={theme==='dark'} onCheckedChange={()=>setTheme('light')} />
               <Label htmlFor="dark-mode">Dark Mode</Label>
-              {darkMode ? <Moon className="ml-2" /> : <Sun className="ml-2" />}
+              {theme==='dark' ? <Moon className="ml-2" /> : <Sun className="ml-2" />}
             </div>
           </section>
 
           {/* Language */}
-          <section className='p-4 border border-gray-800 rounded-lg bg-gray-300 dark:bg-[#0E1B2B]'>
+          <section className='p-4 border  border-gray-300 dark:border-gray-800 rounded-lg bg-light_bg dark:bg-dark_bg'>
             <h2 className="text-xl font-medium mb-4">Language</h2>
             <Select>
               <SelectTrigger className="w-[180px]">
@@ -77,7 +79,7 @@ const Settings = () => {
           </section>
 
           {/* Privacy Settings */}
-          <section className='p-4 border border-gray-800 rounded-lg bg-gray-300 dark:bg-[#0E1B2B]'>
+          <section className='p-4 border  border-gray-300 dark:border-gray-800 rounded-lg bg-light_bg dark:bg-dark_bg'>
             <h2 className="text-xl font-medium mb-4">Privacy Settings</h2>
             <div className="space-y-4">
               <div className="flex items-center space-x-2">

@@ -11,7 +11,7 @@ const IncomeExpenseStat = ({ balance, income, expenses }: IncomeExpenseStatProps
   const [isVisible, setIsVisible] = useState(true);
 
   return (
-    <div className="bg-gray-300 dark:bg-[#0E1B2B] text-white flex flex-col justify-start rounded-xl p-4 w-full md:w-[770px] h-[240px]">
+    <div className="bg-light_bg dark:bg-dark_bg text-light_text_primary dark:text-dark_text_primary flex flex-col justify-start rounded-xl p-4 w-full md:w-[770px] h-[240px]">
       {/* Header with Toggle */}
       <div className="flex items-center text-sm gap-2">
         <h2>Total Balance</h2>

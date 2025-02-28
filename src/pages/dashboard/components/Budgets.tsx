@@ -14,13 +14,13 @@ const budgets = [
 
 const Budgets = () => {
   return (
-    <div className="w-full bg-gray-300 dark:bg-[#0E1B2B] rounded-xl p-4">
+    <div className="w-full bg-light_bg dark:bg-dark_bg rounded-xl p-4">
       <div className="w-full space-y-4">
         <h2 className="text-2xl font-bold mb-4">Monthly Budgets</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {budgets.map((budget, index) => (
             <Card key={index} className="overflow-hidden ">
-              <CardContent className="p-4 bg-gray-300 dark:bg-[#0E1B2B]">
+              <CardContent className="p-4 bg-light_bg dark:bg-dark_bg">
                 <div className="flex justify-between items-center mb-2">
                   <h3 className="font-semibold">{budget.category}</h3>
                   <span className="text-sm font-medium">

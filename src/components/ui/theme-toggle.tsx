@@ -2,9 +2,7 @@
 
 "use client";
 
-import * as React from "react";
 import { motion as m } from "motion/react";
-import { Button } from "@/components/ui/button";
 import { useTheme } from "next-themes";
 
 export default function ToggleTheme() {
@@ -79,13 +77,12 @@ export default function ToggleTheme() {
   const moonPath =
     "M70 49.5C70 60.8218 60.8218 70 49.5 70C38.1782 70 29 60.8218 29 49.5C29 38.1782 38.1782 29 49.5 29C39 45 49.5 59.5 70 49.5Z"
   return (
-      <div className="">
-        <Button
-          variant="outline"
+      <div className="h-10 w-10 flex justify-center items-center">
+        <button
           onClick={() =>
             theme === "dark" ? setTheme("light") : setTheme("dark")
           }
-          className="scale-110"
+          className="scale-[35%]"
         >
           <m.svg
             strokeWidth="4"
@@ -141,7 +138,7 @@ export default function ToggleTheme() {
             />
           </m.svg>
 
-        </Button>
+        </button>
 
       </div>
 

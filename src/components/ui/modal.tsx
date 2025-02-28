@@ -31,7 +31,7 @@ const Modal = ({
                 >
                     <motion.div
                         style={{ width: defaultWidth, padding: defaultPadding }}
-                        className="bg-gray-900 p-6 rounded-lg shadow-lg w-80 text-white  z-50 relative"
+                        className="bg-gray-900 p-6 rounded-lg shadow-lg w-80 text-light_text_primary dark:text-dark_text_primary   z-50 relative"
                         initial={{
                             x: modalPosition.x - window.innerWidth / 2,
                             y: modalPosition.y - window.innerHeight / 2,

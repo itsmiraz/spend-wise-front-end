@@ -54,12 +54,12 @@ const ExpenseModal = () => {
     ];
     return (
         <div className='p-2  relative space-y-4 py-5'>
-            <p className='text-lg font-medium text-white'>
+            <p className='text-lg font-medium text-light_text_primary dark:text-dark_text_primary '>
                 Pay With
             </p>
             <div className='gap-x-4 flex '>
                 {
-                    paymentOptions.map((item) => <button className={` ${selected === item.id ? "bg-[#0987D0] border-transparent" : 'bg-transparent  border-[#868686]'} border transition-all ease-in-out duration-300 rounded-full text-white font-medium  py-[10px] px-[38px]`} onClick={() => setselected(item.id)} key={item.id}>{item.title}</button>)
+                    paymentOptions.map((item) => <button className={` ${selected === item.id ? "bg-[#0987D0] border-transparent" : 'bg-transparent  border-[#868686]'} border transition-all ease-in-out duration-300 rounded-full text-light_text_primary dark:text-dark_text_primary  font-medium  py-[10px] px-[38px]`} onClick={() => setselected(item.id)} key={item.id}>{item.title}</button>)
                 }
             </div>
 
@@ -70,21 +70,21 @@ const ExpenseModal = () => {
                 <input
                     type="number"
                     placeholder='0.00 BDT'
-                    className="bg-transparent text-[63px] text-white font-bold outline-none border-none "
+                    className="bg-transparent text-[63px] text-light_text_primary dark:text-dark_text_primary  font-bold outline-none border-none "
                 />
             </div>
             <div className="flex pb-4  border-b border-[#FFFFFF]/10 relative w-full items-center  px-2 py-1 rounded-md">
                 <input
                     type="text"
                     placeholder='Expense Title'
-                    className="bg-transparent text-[44px] text-white font-semibold outline-none border-none "
+                    className="bg-transparent text-[44px] text-light_text_primary dark:text-dark_text_primary  font-semibold outline-none border-none "
                 />
             </div>
             <div className="flex  pb-4 border-b border-[#FFFFFF]/10 relative w-full items-center  px-2 py-1 rounded-md">
                 <input
                     type="text"
                     placeholder='Add Description'
-                    className="bg-transparent text-[28px] text-white font-semibold outline-none border-none "
+                    className="bg-transparent text-[28px] text-light_text_primary dark:text-dark_text_primary  font-semibold outline-none border-none "
                 />
             </div>
 
@@ -93,7 +93,7 @@ const ExpenseModal = () => {
                 {
                     categories.map((item) => <button
                         style={{ background: selectedCatagory === item.id ? `${item.color}` : 'transparent', borderColor: selectedCatagory === item.id ? 'transparent' : `${item.color}` }}
-                        className={`  border transition-all ease-in-out duration-300 rounded-full text-white font-medium  py-[10px] px-[38px]`}
+                        className={`  border transition-all ease-in-out duration-300 rounded-full text-light_text_primary dark:text-dark_text_primary  font-medium  py-[10px] px-[38px]`}
                         onClick={() => setSelectedCatagory(item.id)}
                         key={item.id}>
                         {item.title}
@@ -102,7 +102,7 @@ const ExpenseModal = () => {
             </div>
 
             {/* created at */}
-            <div className='px-8 py-3 rounded-full flex w-fit gap-x-5 text-sm text-white  bg-[#233640]'>
+            <div className='px-8 py-3 rounded-full flex w-fit gap-x-5 text-sm text-light_text_primary dark:text-dark_text_primary   bg-[#233640]'>
                 <p>Created At</p>
                 <p>21 Feb, 9:00 PM</p>
             </div>

@@ -11,7 +11,7 @@ const RootLayout = () => {
 
   return (
     <div>
-      <div className="flex bg-gray-100 dark:bg-[#0d1016] relative overflow-hidden max-w-[2200px] mx-auto text-white ">
+      <div className="flex bg-light_bg/90 dark:bg-dark_bg/40 relative overflow-hidden max-w-[2200px] mx-auto text-light_text_primary dark:text-dark_text_primary  ">
         <div className="px-4 md:block hidden pt-4 sticky top-4">
           <CustomSidebar />
         </div>
@@ -23,7 +23,7 @@ const RootLayout = () => {
               </button>
             </div>
             <div>
-              <h2>Spend Wise</h2>
+              <h2 className="text-xl text-primary font-medium">Spendium</h2>
             </div>
             <div></div>
           </div>

@@ -25,8 +25,8 @@ const CustomSidebar = () => {
 
 
   return (
-    <div className="max-h-screen flex-col flex h-full rounded-xl   text-gray-800 dark:text-gray-200 p-4  bg-gray-300  dark:bg-[#0E1B2B] w-[250px]">
-      <h2 className="font-bold pb-4  text-xl">SPEND WISE</h2>
+    <div className="max-h-screen flex-col flex h-full rounded-xl   text-gray-800 dark:text-gray-200 p-4  bg-light_bg  dark:bg-dark_bg w-[250px]">
+      <h2 className="font-semibold text-primary pb-4  text-3xl">Spendium</h2>
 
       <ul className="pt-5 h-full border-t  border-b pb-4 border-gray-700 space-y-2  mt-10 ">
         {links.map((item, i) => (
@@ -35,7 +35,7 @@ const CustomSidebar = () => {
               to={item.link}
               className={({ isActive }) =>
                 `flex rounded-lg px-2  transition-all ease-in-out duration-300 py-2 items-center gap-x-2 ${
-                  isActive ? "bg-gray-400 " : "hover:bg-[#676767] text-gray-800 "
+                  isActive ? "bg-blue-200 dark:bg-blue-500 " : "hover:bg-blue-200 dark:hover:bg-blue-300    "
                 }`
               }
             >

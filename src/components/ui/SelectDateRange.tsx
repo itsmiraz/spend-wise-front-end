@@ -42,14 +42,14 @@ const SelectDateRange = () => {
     };
 
     return (
-        <div className="relative w-[210px] text-white">
+        <div className="relative w-[210px]   text-light_text_primary dark:text-dark_text_primary">
 
             <div className="relative md:w-fit w-full">
                 {/* Custom UI */}
                 <div
                     className="relative  w-[210px] font-inter h-[49px] text-[14px] leading-3  max-w-full md:max-w-[240px] rounded-[13px] gap-x-[25px] border pr-4 py-0 pl-[15px] flex items-center justify-between  font-medium border-[#aaaaaa] cursor-pointer"
                 >
-                    <p className="truncate  text-white w-[210px]">{formatDateRange()}</p>
+                    <p className="truncate  text-light_text_primary dark:text-dark_text_primary w-[210px]">{formatDateRange()}</p>
                     {/* <Calendar /> */}
                 </div>
 
